@@ -1,0 +1,18 @@
+[
+  {
+    "Text":"Would you rather Test-First, or Debug-Later?",
+    "Attribution":"Robert Cecil Martin"
+  },
+  {
+    "Text":"The best way to get an answer on the internet is not to ask a question, but to give the wrong answer",
+    "Attribution":"Ward Cunningham"
+  },
+  {
+    "Text":"Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    "Attribution":"Martin Fowler"
+  },
+  {
+    "Text": "Simplicity is a prerequisite for reliability.",
+    "Attribution":"Edsger W. Dijkstra"
+  }
+]
