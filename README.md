@@ -4,7 +4,8 @@ Dotnet app which shows an application of the hexagonal architecture with differe
 
 ## Introduction
 
-The driver side has two different technologies namely a console app and a web app (asp.net core). The driven side uses three different repositories namely a filesystem (json), a database (entity framework) and an in memory database implemented with an array. The maincomponent sets up the configurable dependencies. The configurable dependency for the driver side are automatically instantiated at application startup using generics. The driven side configurable dependency can be changed manually.
+The application has two driver actors and three driven actors (excluding the tests). The application can be driven from a web application (asp.net core) and a console application. The driven side consist of three repositories namely a filesystem (json), a database (entity framework) and an in memory database implemented with an array. The application does not have recipients.  
+The maincomponent sets up the configurable dependencies. The configurable dependency for the driver side is automatically instantiated at application startup using generics. The driven side configurable dependency can be changed manually. To see how see section [Instructions](#Instructions)
 
 ## Setup
 
@@ -39,6 +40,8 @@ It should look like this
 It should look like this  
 ![image](https://user-images.githubusercontent.com/74194913/228918609-88a08878-f853-431b-95dc-15873cb338ad.png)   
 5. Click OK then Apply and OK.
+
+The web application should be configured correctly. If this is not the case you can follow the above described procedure for the QuotesReader.Infrastructure.Web project.
      
 ## Instructions
 
@@ -48,4 +51,4 @@ To switch between the different technologies on the driven side, open MainCompon
 
 You can now change the implementation of the IObtainQuotesPort to either of the three technologies you wish. The implementations are named as follows: QuotesByFamousPeopleUsingArray, QuotesByScientistsUsingEf and QuotesByProgrammersUsingJson.
 
-Hopefully this demo application helps with understanding hexagonal architecture.
+Hopefully this demo-application helps with understanding hexagonal architecture.
