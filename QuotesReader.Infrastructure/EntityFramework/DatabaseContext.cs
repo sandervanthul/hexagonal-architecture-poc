@@ -17,10 +17,10 @@ public class DatabaseContextFactory : IDesignTimeDbContextFactory<DatabaseContex
 {
     public DatabaseContext CreateDbContext(string[] args)
     {
-        var connectionString = Environment.GetEnvironmentVariable("SQL_SERVER_CONNECTION_STRING");
         var optionsBuilder = new DbContextOptionsBuilder<DatabaseContext>();
         
-        optionsBuilder.UseSqlServer(connectionString, b => b.MigrationsAssembly("QuotesReader.Infrastructure"));
+        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Quotes", 
+            b => b.MigrationsAssembly("QuotesReader.Infrastructure"));
 
         return new DatabaseContext(optionsBuilder.Options);
     }
