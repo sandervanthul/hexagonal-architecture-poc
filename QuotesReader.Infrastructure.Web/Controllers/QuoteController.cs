@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using QuotesReader.Infrastructure.Web.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace QuotesReader.Infrastructure.Web.Controllers;
 
@@ -18,7 +16,7 @@ public class QuoteController : Controller
     public IActionResult Index()
     {
         var quote = _adapter.RequestQuote();
-        
+
         return View(quote);
     }
 }

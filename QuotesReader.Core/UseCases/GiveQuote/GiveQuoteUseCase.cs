@@ -5,7 +5,7 @@ namespace QuotesReader.Core.UseCases.GiveQuote;
 public class GiveQuoteUseCase : IGiveQuotePort
 {
     private IObtainQuotesPort _repository;
-    
+
     public GiveQuoteUseCase(IObtainQuotesPort repository)
     {
         _repository = repository;
@@ -14,7 +14,7 @@ public class GiveQuoteUseCase : IGiveQuotePort
     public GiveQuoteUseCase()
     {
     }
-    
+
     public GiveQuoteResponse GiveQuote()
     {
         var quote = _repository.GetRandomQuote();

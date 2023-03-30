@@ -1,5 +1,5 @@
-﻿using System.Text.Json;
-using QuotesReader.Core.Entities.Quote;
+﻿using QuotesReader.Core.Entities.Quote;
+using System.Text.Json;
 
 namespace QuotesReader.Infrastructure.Repositories;
 

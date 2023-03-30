@@ -11,7 +11,7 @@ public class WebAdapter
     public WebAdapter()
     {
     }
-    
+
     public WebAdapter(IGiveQuotePort quoteUseCase)
     {
         _quoteUseCase = quoteUseCase;
@@ -22,7 +22,7 @@ public class WebAdapter
         var quote = _quoteUseCase.GiveQuote();
 
         QuotePresenter presenter = new QuotePresenter();
-        
+
         return presenter.Present(quote);
     }
 }

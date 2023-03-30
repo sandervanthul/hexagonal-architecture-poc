@@ -22,7 +22,7 @@ public class ConsoleAdapter
         var quote = _quoteUseCase.GiveQuote();
 
         QuotePresenter presenter = new QuotePresenter();
-        
+
         return presenter.Present(quote);
     }
 }

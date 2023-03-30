@@ -17,10 +17,10 @@ public class QuotesByScientistsUsingEf : IObtainQuotesPort
         var count = _dbContext.Quotes.Count();
         int random = Random.Shared.Next(1, count + 1);
         var quoteRecord = GetQuoteRecordByIdAsync(random).Result;
-        
+
         return new Quote(quoteRecord.Text, quoteRecord.Attribution);
     }
-    
+
     private async Task<QuoteRecord> GetQuoteRecordByIdAsync(int id)
     {
         var quote = await _dbContext.Quotes

@@ -1,7 +1,11 @@
 {
   "profiles": {
-    "QuotesReader.Infrastructure.Console": {
-      "commandName": "Project"
+    "Console": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "SQL_SERVER_CONNECTION_STRING": "Server=(localdb)\\mssqllocaldb;Database=Quotes"
+      }
     }
   }
 }

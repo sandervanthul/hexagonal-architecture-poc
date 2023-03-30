@@ -9,10 +9,10 @@ class Program
     {
         var services = new ServiceCollection();
         var serviceProvider = MainComponent.DependencyInjection<ConsoleAdapter>(services).BuildServiceProvider();
-        
+
         using var scope = serviceProvider.CreateScope();
         var adapter = scope.ServiceProvider.GetService<ConsoleAdapter>();
-        
+
         while (true)
         {
             var quote = adapter.RequestQuote();
