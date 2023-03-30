@@ -9,39 +9,13 @@ The maincomponent sets up the configurable dependencies. The configurable depend
 
 ## Setup
 
-In order to get the database working there is some setup required. The only setup required is the Environment Variables.
+In order to get the database working there is some setup required.
 
-### Visual Studio
-1. Right click on the QuotesReader.Infrastructure.Console project and click 'properties'.
-2. Click on debug.
-3. Under general click on 'Open debug launch profiles ui'
-4. Scroll down to Environment variables and enter the following text:
-- under Name enter: 
-    > SQL_SERVER_CONNECTION_STRING
-- under Value enter: 
-    > Server=(localdb)\mssqllocaldb;Database=Quotes
-     
-It should look like this
+If you do not have the dotnet-ef tools installed, download it with the following command in the terminal:
+> dotnet tool install --global dotnet-ef
 
-![image](https://user-images.githubusercontent.com/74194913/228912653-41520235-bcb4-4bcc-9844-df4f7b75c3fd.png)
-
-
-### Rider
-1. Click on 'Run' in the top right navigation bar and click on 'Edit Configurations'.
-2. Click on .NET Project -> QuotesReader.Infrastructure.Console
-3. On the right in the Environment variables bar, click on the icon:
-![image](https://user-images.githubusercontent.com/74194913/228917675-884870bb-accc-4cee-8f75-a537a01fcc9e.png)  
-4. Click on the + symbol and enter the following text:
-- under Name enter: 
-    > SQL_SERVER_CONNECTION_STRING
-- under Value enter: 
-    > Server=(localdb)\mssqllocaldb;Database=Quotes
- 
-It should look like this  
-![image](https://user-images.githubusercontent.com/74194913/228918609-88a08878-f853-431b-95dc-15873cb338ad.png)   
-5. Click OK then Apply and OK.
-
-The web application should be configured correctly. If this is not the case you can follow the above described procedure for the QuotesReader.Infrastructure.Web project.
+Once installed run the following command in the terminal from within the project root folder:
+> dotnet ef database update --project QuotesReader.Infrastructure
      
 ## Instructions
 
