@@ -1,4 +1,4 @@
-using CompositionRoot;
+using QuotesReader.Infrastructure.Web.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 

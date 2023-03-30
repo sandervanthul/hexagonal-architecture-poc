@@ -8,7 +8,8 @@ class Program
 {
     public static void Main(string[] args)
     {
-        var serviceProvider = MainComponent.SetupDependencyInjectionConsole();
+        var services = new ServiceCollection();
+        var serviceProvider = MainComponent.SetupDependencyInjection<ConsoleAdapter>(services).BuildServiceProvider();
         
         using var scope = serviceProvider.CreateScope();
         var adapter = scope.ServiceProvider.GetService<ConsoleAdapter>();
