@@ -17,7 +17,7 @@ public class WebAdapter
         _quoteUseCase = quoteUseCase;
     }
 
-    public QuoteViewModel GiveMeAQuote()
+    public QuoteViewModel RequestQuote()
     {
         var quote = _quoteUseCase.GiveQuote();
 

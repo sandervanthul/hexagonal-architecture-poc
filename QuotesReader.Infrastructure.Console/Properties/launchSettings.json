@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "QuotesReader.Infrastructure.Console": {
+      "commandName": "Project"
+    }
+  }
+}

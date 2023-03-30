@@ -9,16 +9,15 @@ namespace CompositionRoot;
 
 public static class MainComponent
 {
-    public static IServiceCollection SetupDependencyInjection<T>(IServiceCollection services) where T : class
+    public static IServiceCollection DependencyInjection<T>(IServiceCollection services) where T : class
     {
-        var connectionString = Environment.GetEnvironmentVariable("SQL_SERVER_CONNECTION_STRING");
-        
         services.AddDbContext<DatabaseContext>(options =>
         {
-            options.UseSqlServer(connectionString, b => b.MigrationsAssembly("QuotesReader.Infrastructure"));
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Quotes", 
+                b => b.MigrationsAssembly("QuotesReader.Infrastructure"));
         });
 
-        services.AddScoped<IObtainQuotesPort, QuotesByScientistsUsingEf>() // configurable dependency; change with QuotesByFamousPeopleUsingArray
+        services.AddScoped<IObtainQuotesPort, QuotesByScientistsUsingEf>() // configurable dependency; switch between QuotesByFamousPeopleUsingArray
             .AddScoped<IGiveQuotePort, GiveQuoteUseCase>()                 // or QuotesByScientistsUsingEf or QuotesByProgrammersUsingJson
             .AddScoped<T>();
 

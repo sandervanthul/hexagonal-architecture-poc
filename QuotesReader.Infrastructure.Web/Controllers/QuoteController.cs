@@ -17,7 +17,7 @@ public class QuoteController : Controller
 
     public IActionResult Index()
     {
-        var quote = _adapter.GiveMeAQuote();
+        var quote = _adapter.RequestQuote();
         
         return View(quote);
     }

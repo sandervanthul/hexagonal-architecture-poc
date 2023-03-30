@@ -6,6 +6,6 @@ public static class RegisterExtensions
 {
     public static void Register(this IServiceCollection services, IConfiguration configuration)
     {
-        MainComponent.SetupDependencyInjection<WebAdapter>(services);
+        MainComponent.DependencyInjection<WebAdapter>(services);
     }
 }

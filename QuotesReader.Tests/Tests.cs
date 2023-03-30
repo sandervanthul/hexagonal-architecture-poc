@@ -44,7 +44,7 @@ public class Tests
         // left side adapter
         var consoleAdapter = new ConsoleAdapter(app);
         
-        var actual = consoleAdapter.GiveMeAQuote();
+        var actual = consoleAdapter.RequestQuote();
         
         actual.Should().BeEquivalentTo(expected);
     }

@@ -17,7 +17,7 @@ public class ConsoleAdapter
         _quoteUseCase = quoteUseCase;
     }
 
-    public QuoteViewModel GiveMeAQuote()
+    public QuoteViewModel RequestQuote()
     {
         var quote = _quoteUseCase.GiveQuote();
 
