@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\QuotesReader.CompositionRoot\QuotesReader.CompositionRoot.csproj" />
+      <ProjectReference Include="..\QuotesReader.Infrastructure\QuotesReader.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>

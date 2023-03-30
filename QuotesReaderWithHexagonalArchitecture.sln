@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{0DDECFD0-D342-4454-BF8A-8856D0A09346}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.Tests", "QuotesReader.Tests\QuotesReader.Tests.csproj", "{0DDECFD0-D342-4454-BF8A-8856D0A09346}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{AFA3D565-9A59-4604-A6FF-FDAD5B070D27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.Core", "QuotesReader.Core\QuotesReader.Core.csproj", "{AFA3D565-9A59-4604-A6FF-FDAD5B070D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{0469E447-0CF8-4C70-A48F-C7EB4C5C2CE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.Infrastructure.Console", "QuotesReader.Infrastructure.Console\QuotesReader.Infrastructure.Console.csproj", "{0469E447-0CF8-4C70-A48F-C7EB4C5C2CE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{22566BD3-14F2-4F90-B046-E00386D42668}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.Infrastructure", "QuotesReader.Infrastructure\QuotesReader.Infrastructure.csproj", "{22566BD3-14F2-4F90-B046-E00386D42668}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionRoot", "CompositionRoot\CompositionRoot.csproj", "{6F5FCE8B-E91C-455A-A16D-FDFC97D59CF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.CompositionRoot", "QuotesReader.CompositionRoot\QuotesReader.CompositionRoot.csproj", "{6F5FCE8B-E91C-455A-A16D-FDFC97D59CF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{DA203C4B-4AAB-4003-A1AC-F9DE35298833}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuotesReader.Infrastructure.Web", "QuotesReader.Infrastructure.Web\QuotesReader.Infrastructure.Web.csproj", "{DA203C4B-4AAB-4003-A1AC-F9DE35298833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
