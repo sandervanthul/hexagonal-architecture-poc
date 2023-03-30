@@ -1,24 +1,15 @@
 ﻿using QuotesReader.Core.Entities.Quote;
 using QuotesReader.Core.UseCases.GiveQuote;
-using QuotesReader.Infrastructure.Console;
 using QuotesReader.Infrastructure.EntityFramework;
 using QuotesReader.Infrastructure.Repositories;
-using QuotesReader.Infrastructure.Web;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CompositionRoot;
 
 public static class MainComponent
 {
-    public static ServiceProvider SetupDependencyInjectionConsole()
-    {
-        var services = new ServiceCollection();
-        return SetupDependencyInjection(services).BuildServiceProvider();
-    }
-    
-    private static IServiceCollection SetupDependencyInjection(IServiceCollection services)
+    public static IServiceCollection SetupDependencyInjection<T>(IServiceCollection services) where T : class
     {
         var connectionString = Environment.GetEnvironmentVariable("SQL_SERVER_CONNECTION_STRING");
         
@@ -27,15 +18,10 @@ public static class MainComponent
             options.UseSqlServer(connectionString, b => b.MigrationsAssembly("QuotesReader.Infrastructure"));
         });
 
-        services.AddScoped<IObtainQuotesPort, QuotesByProgrammersUsingJson>()
-            .AddScoped<IGiveQuotePort, GiveQuoteUseCase>()
-            .AddScoped<WebAdapter>();
+        services.AddScoped<IObtainQuotesPort, QuotesByScientistsUsingEf>() // configurable dependency; change with QuotesByFamousPeopleUsingArray
+            .AddScoped<IGiveQuotePort, GiveQuoteUseCase>()                 // or QuotesByScientistsUsingEf
+            .AddScoped<T>();
 
         return services;
-    }
-    
-    public static void Register(this IServiceCollection services, IConfiguration configuration)
-    {
-        SetupDependencyInjection(services);
     }
 }
